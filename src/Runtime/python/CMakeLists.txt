@@ -40,6 +40,8 @@ target_include_directories(OMPyExecutionSessionBase
   $<TARGET_PROPERTY:onnx,INCLUDE_DIRECTORIES>
   )
 
+add_dependencies(OMPyExecutionSessionBase onnx_proto)
+
 # When running on ubi8 image, shared lib backend tests fail with
 # the following error:
 #
